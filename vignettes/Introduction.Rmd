@@ -77,11 +77,12 @@ bench::mark(
 )
 ```
 
-Clearly, the speed of `html_decode` function is unparalled.
+Clearly, the speed of `html_decode` function is unparalleled.
 
 **Note**:
+
 When testing the results, I discovered a bug in `textutils::HTMLdecode` and reported it
 [here](https://github.com/enricoschumann/textutils/issues/3). The maintainer fixed it immediately.
 As of this writing (Feb. 16, 2021), the development version of `textutils` has this bug fixed,
-but the CRAN version may not. This means that if you test the performance youself with a previous version
+but the CRAN version may not. This means that if you test the performance yourself with a previous version
 of `textutils`, you may run into error and installing the development version will solve for it.
