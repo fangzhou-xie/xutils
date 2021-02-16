@@ -1,18 +1,28 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # xutils
 
 <!-- badges: start -->
-
-[![Build
-Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/xutils)
-[![License:
-MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/xutils)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-This is a package that contains functions dealing with data, which I
-personally found useful. Hence the name: **x**utils.
+This is a package that contains functions dealing with data,
+which I personally found useful. Hence the name:
+**x**utils.
 
 ## Installation
 
@@ -29,20 +39,17 @@ And the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("fangzhou-xie/xutils")
 ```
-
 ## Example
 
-This is a basic example of using the only function in `xutils` package:
-the `html_decode` function.
+This is a basic example of using the only function in `xutils` package: the `html_decode` function.
 
-``` r
+```{r example}
 # load library
 library(xutils)
 # create test strings
 strings <- c("abcd", "&amp; &apos; &gt;", "&amp;", "&euro; &lt;")
 # decode
 html_decode(strings)
-#> [1] "abcd"  "& ' >" "&"     "€ <"
 ```
 
 ## License
