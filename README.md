@@ -45,3 +45,5 @@ bench::mark(
 3 textutils::HTMLdecode(strings)   4.43ms   4.58ms      216.  340.45KB     62.8    69    20    318.7ms <chr … <Rpro…
 # … with 2 more variables: time <list>, gc <list>
 ```
+
+Please refer to the vignettes for more details.
