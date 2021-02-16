@@ -71,7 +71,7 @@ Now, let's test the performance and I use `bench` package here.
 
 ```{r}
 bench::mark(
-  html_decode(strings, backend = "rcpp"),
+  html_decode(strings),
   unescape_html2(strings),
   textutils::HTMLdecode(strings)
 )
