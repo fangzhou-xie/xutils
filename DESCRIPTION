@@ -1,16 +1,26 @@
 Package: xutils
-Title: What the Package Does (One Line, Title Case)
+Title: Utility Functions of Fangzhou Xie
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Fangzhou",
+           family = "Xie",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "fangzhou.xie@rutgers.edu",
+           comment = c(ORCID = "https://orcid.org/0000-0001-7702-093X"))
+Description: A collection of some (hopefully) useful functions.
+License: License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp,
+    xml2
+Suggests: 
+    knitr,
+    rmarkdown,
+    textutils,
+    bench
+VignetteBuilder: knitr

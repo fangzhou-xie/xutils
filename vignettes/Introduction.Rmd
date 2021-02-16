@@ -1,0 +1,87 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This is a package where I collected some of the function I have used when dealing with data.
+
+```{r setup}
+library(xutils)
+```
+
+# Text-related Functions
+
+## `html_decode`
+
+Currently, there is only one function: `html_decode` which will replace the HTML entities like
+`&amp;` into their original form `&`.
+
+This function is a thin-wrapper of C++ code provided by **Christoph**
+on [Stack Overflow](https://stackoverflow.com/a/1082191/10437891).
+
+### Example
+
+An example would be
+
+```{r}
+strings <- c("abcd", "&amp; &apos; &gt;", "&amp;", "&euro; &lt;")
+html_decode(strings)
+```
+
+It works very well!
+
+### Comparison with Existing Solutions
+
+To the best of my knowledge, there are already several solutions to this problem, and why do I need to 
+wrap up a new function to do this? Because of performance.
+
+First of all, there is an existing package `textutils` that contains lots of functions dealing with data.
+The one of our interest is `HTMLdecode`.
+
+Second, there is a function by SO user **Stibu**
+[here](https://stackoverflow.com/questions/5060076/convert-html-character-entity-encoding-in-r/65909574#65909574)
+that uses `xml2` package.
+And the function is:
+
+```{r}
+unescape_html2 <- function(str){
+  html <- paste0("<x>", paste0(str, collapse = "#_|"), "</x>")
+  parsed <- xml2::xml_text(xml2::read_html(html))
+  strsplit(parsed, "#_|", fixed = TRUE)[[1]]
+}
+```
+
+Third, I took the code from **Christoph**
+([here](https://stackoverflow.com/a/1082191/10437891))
+and wrote a R wrapper for the C function.
+This function is `xutils::html_decode`.
+
+Now, let's test the performance and I use `bench` package here.
+
+```{r}
+bench::mark(
+  html_decode(strings, backend = "rcpp"),
+  unescape_html2(strings),
+  textutils::HTMLdecode(strings)
+)
+```
+
+Clearly, the speed of `html_decode` function is unparalled.
+
+**Note**:
+When testing the results, I discovered a bug in `textutils::HTMLdecode` and reported it
+[here](https://github.com/enricoschumann/textutils/issues/3). The maintainer fixed it immediately.
+As of this writing (Feb. 16, 2021), the development version of `textutils` has this bug fixed,
+but the CRAN version may not. This means that if you test the performance youself with a previous version
+of `textutils`, you may run into error and installing the development version will solve for it.
