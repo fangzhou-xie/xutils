@@ -10,9 +10,10 @@ There were no ERRORs or WARNINGS or NOTEs.
 
 * This is a new release.
 * This is also my first submission to CRAN.
+* Elaborate on description and fix software version number, and resubmit the package.
 
 ## Downstream dependencies
-There are currently no downstream depencencies for this package.
+There are currently no downstream dependencies for this package.
 
 
 ## License
