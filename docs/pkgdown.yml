@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   Introduction: Introduction.html
-last_built: 2021-02-17T19:54Z
+last_built: 2021-02-17T20:12Z
 urls:
   reference: https://fangzhou-xie.github.io/xutils/reference
   article: https://fangzhou-xie.github.io/xutils/articles

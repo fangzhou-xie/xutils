@@ -2,23 +2,21 @@
 % Please edit documentation in R/html_decode.R
 \name{html_decode}
 \alias{html_decode}
-\title{decode a single element character vector
-using Christoph's C++ code
-https://stackoverflow.com/a/1082191/10437891}
+\title{Decode a character vector}
 \usage{
 html_decode(str)
 }
 \arguments{
-\item{str}{A single string}
+\item{str}{A character vector}
 }
 \value{
-decoded string
+Decoded character vector
 }
 \description{
-decode a single element character vector
-using Christoph's C++ code
-https://stackoverflow.com/a/1082191/10437891
+This function is a wrapper around existing C++ code on decoding HTML entities.
+The original C++ code is given by Christoph. Please refer to the answer on SO
+\href{https://stackoverflow.com/a/1082191/10437891}{here}.
 }
 \examples{
-html_decode("&amp;")
+html_decode(c("&amp;", "&euro;"))
 }

@@ -1,13 +1,11 @@
 #' Decode a character vector
 #'
-#' This function is a wrapper around existing C++ code
-#' on decoding HTML entities.
-#' The original C++ code is given by Christoph.
-#' Please refer to the answer on SO here:
-#' https://stackoverflow.com/a/1082191/10437891.
+#' This function is a wrapper around existing C++ code on decoding HTML entities.
+#' The original C++ code is given by Christoph. Please refer to the answer on SO
+#' [here](https://stackoverflow.com/a/1082191/10437891).
 #'
-#' @param str A single string
-#' @return decoded string
+#' @param str A character vector
+#' @return Decoded character vector
 #' @examples
 #' html_decode(c("&amp;", "&euro;"))
 #' @export
