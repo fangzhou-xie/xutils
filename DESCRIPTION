@@ -8,7 +8,7 @@ Authors@R:
            email = "fangzhou.xie@rutgers.edu",
            comment = c(ORCID = "https://orcid.org/0000-0001-7702-093X"))
 Description: This is a collection of some useful functions when dealing with text data. 
-    Currently it only contains a very efficient function of decoding HTML entites
+    Currently it only contains a very efficient function of decoding HTML entities
     in character vectors by Rcpp routine.
 License: MIT + file LICENSE
 Encoding: UTF-8
