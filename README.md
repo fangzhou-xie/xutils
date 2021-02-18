@@ -16,12 +16,14 @@ personally found useful. Hence the name: **x**utils.
 
 ## Installation
 
-This package is planned to be submitted to CRAN.
-<!-- You can install the released version of xutils from [CRAN](https://CRAN.R-project.org) with: -->
+<!-- This package is planned to be submitted to CRAN. -->
 
-<!-- ``` r -->
-<!-- install.packages("xutils") -->
-<!-- ``` -->
+You can install the released version of `xutils` from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("xutils")
+```
 
 And the development version from [GitHub](https://github.com/) with:
 
