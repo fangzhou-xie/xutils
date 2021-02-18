@@ -13,9 +13,21 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r echo = FALSE, results = "hide", message = FALSE}
+library(badger)
+```
+
 # xutils
 
 <!-- badges: start -->
+```{r, echo = FALSE, results = "asis"}
+cat(
+  badge_cran_release("xutils", "green"),
+  badge_cran_download("xutils", "grand-total", "green"),
+  badge_cran_checks("xutils"),
+  badge_last_commit("fangzhou-xie/xutils")
+)
+```
 [![Build Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/xutils)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->

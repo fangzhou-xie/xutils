@@ -5,6 +5,11 @@
 
 <!-- badges: start -->
 
+[![](https://www.r-pkg.org/badges/version/xutils?color=green)](https://cran.r-project.org/package=xutils)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/xutils?color=green)](https://cran.r-project.org/package=xutils)
+[![CRAN
+checks](https://cranchecks.info/badges/summary/xutils)](https://cran.r-project.org/web/checks/check_results_xutils.html)
+[![](https://img.shields.io/github/last-commit/fangzhou-xie/xutils.svg)](https://github.com/fangzhou-xie/xutils/commits/master)
 [![Build
 Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/xutils)
 [![License:
