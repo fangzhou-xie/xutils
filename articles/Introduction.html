@@ -137,9 +137,9 @@
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   expression                          min   median `itr/sec` mem_alloc `gc/sec`</span>
 <span class="co">#&gt;   &lt;bch:expr&gt;                     &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 html_decode(strings)               18µs  19.95µs    46669.    2.49KB     4.67</span>
-<span class="co">#&gt; 2 unescape_html2(strings)         226.5µs  249.3µs     3749.  499.42KB     8.26</span>
-<span class="co">#&gt; 3 textutils::HTMLdecode(strings)    6.9ms   7.21ms      137.  374.53KB    25.5</span></code></pre></div>
+<span class="co">#&gt; 1 html_decode(strings)             17.3µs  19.97µs    47502.    2.49KB     4.75</span>
+<span class="co">#&gt; 2 unescape_html2(strings)        232.38µs 245.29µs     3734.  499.42KB     8.26</span>
+<span class="co">#&gt; 3 textutils::HTMLdecode(strings)   6.91ms   7.33ms      135.  374.53KB    22.5</span></code></pre></div>
 <p>Clearly, the speed of <code>html_decode</code> function is unparalleled.</p>
 <p><strong>Note</strong>:</p>
 <p>When testing the results, I discovered a bug in <code><a href="https://rdrr.io/pkg/textutils/man/HTMLdecode.html">textutils::HTMLdecode</a></code> and reported it <a href="https://github.com/enricoschumann/textutils/issues/3">here</a>. The maintainer fixed it immediately. As of this writing (Feb. 16, 2021), the development version of <code>textutils</code> has this bug fixed, but the CRAN version may not. This means that if you test the performance yourself with a previous version of <code>textutils</code>, you may run into error and installing the development version will solve for it.</p>
