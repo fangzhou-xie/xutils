@@ -11,7 +11,7 @@
 checks](https://cranchecks.info/badges/summary/xutils)](https://cran.r-project.org/web/checks/check_results_xutils.html)
 [![](https://img.shields.io/github/last-commit/fangzhou-xie/xutils.svg)](https://github.com/fangzhou-xie/xutils/commits/master)
 [![Build
-Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/xutils)
+Status](https://travis-ci.com/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/xutils)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
