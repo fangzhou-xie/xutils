@@ -23,6 +23,7 @@ Imports:
     Rcpp
 Suggests: 
     knitr,
+    markdown,
     rmarkdown,
     textutils,
     bench,
