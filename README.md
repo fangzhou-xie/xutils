@@ -5,13 +5,10 @@
 
 <!-- badges: start -->
 
-[![](https://www.r-pkg.org/badges/version/xutils?color=green)](https://cran.r-project.org/package=xutils)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/xutils?color=green)](https://cran.r-project.org/package=xutils)
-[![CRAN
-checks](https://cranchecks.info/badges/summary/xutils)](https://cran.r-project.org/web/checks/check_results_xutils.html)
-[![](https://img.shields.io/github/last-commit/fangzhou-xie/xutils.svg)](https://github.com/fangzhou-xie/xutils/commits/master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/xutils)](https://CRAN.R-project.org/package=xutils)
+[![CRAN\_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/xutils)](https://CRAN.R-project.org/package=xutils)
 [![Build
-Status](https://travis-ci.com/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/xutils)
+Status](https://app.travis-ci.com/fangzhou-xie/xutils.svg?branch=main)](https://app.travis-ci.com/github/fangzhou-xie/xutils)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
