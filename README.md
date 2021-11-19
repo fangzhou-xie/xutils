@@ -5,10 +5,9 @@
 
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/xutils)](https://CRAN.R-project.org/package=xutils)
-[![CRAN\_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/xutils)](https://CRAN.R-project.org/package=xutils)
-[![Build
-Status](https://app.travis-ci.com/fangzhou-xie/xutils.svg?branch=main)](https://app.travis-ci.com/github/fangzhou-xie/xutils)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/xutils)](https://CRAN.R-project.org/package=xutils)
+[![CRAN_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/xutils)](https://CRAN.R-project.org/package=xutils)
+[![R-CMD-check](https://github.com/fangzhou-xie/xutils/workflows/R-CMD-check/badge.svg)](https://github.com/fangzhou-xie/xutils/actions)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->

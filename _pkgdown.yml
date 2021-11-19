@@ -1,9 +1,0 @@
-home:
-  title: An R package for useful functions dealing with text data
-  description: This package collects some useful functions that deal with text data.
-
-template:
-  params:
-    bootswatch: flatly
-
-url: https://fangzhou-xie.github.io/xutils
