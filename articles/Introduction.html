@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Introduction • xutils</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -102,7 +102,7 @@
 <h2 class="hasAnchor">
 <a href="#html_decode" class="anchor"></a><code>html_decode</code>
 </h2>
-<p>Currently, there is only one function: <code>html_decode</code> which will replace the HTML entities like <code>&amp;amp;</code> into their original form <code><a href="https://rdrr.io/r/base/Logic.html">&amp;</a></code>.</p>
+<p>Currently, there is only one function: <code>html_decode</code> which will replace the HTML entities like <code>&amp;amp;</code> into their original form <code>&amp;</code>.</p>
 <p>This function is a thin-wrapper of C++ code provided by <strong>Christoph</strong> on <a href="https://stackoverflow.com/a/1082191/10437891">Stack Overflow</a>.</p>
 <div id="example" class="section level3">
 <h3 class="hasAnchor">
@@ -137,9 +137,9 @@
 <span class="co">#&gt; # A tibble: 3 × 6</span>
 <span class="co">#&gt;   expression                          min   median `itr/sec` mem_alloc `gc/sec`</span>
 <span class="co">#&gt;   &lt;bch:expr&gt;                     &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 html_decode(strings)            14.96µs  19.46µs    45969.    2.49KB     0   </span>
-<span class="co">#&gt; 2 unescape_html2(strings)        202.92µs  220.4µs     4317.  496.34KB     6.15</span>
-<span class="co">#&gt; 3 textutils::HTMLdecode(strings)   8.84ms   9.59ms      103.  375.95KB    20.6</span></code></pre></div>
+<span class="co">#&gt; 1 html_decode(strings)              6.1µs    8.7µs   109275.    2.49KB     10.9</span>
+<span class="co">#&gt; 2 unescape_html2(strings)        113.61µs 124.81µs     7313.  496.71KB     12.5</span>
+<span class="co">#&gt; 3 textutils::HTMLdecode(strings)   6.08ms   7.01ms      143.  376.19KB     31.2</span></code></pre></div>
 <p>Clearly, the speed of <code>html_decode</code> function is unparalleled.</p>
 <p><strong>Note</strong>:</p>
 <p>When testing the results, I discovered a bug in <code><a href="https://rdrr.io/pkg/textutils/man/HTMLdecode.html">textutils::HTMLdecode</a></code> and reported it <a href="https://github.com/enricoschumann/textutils/issues/3">here</a>. The maintainer fixed it immediately. As of this writing (Feb. 16, 2021), the development version of <code>textutils</code> has this bug fixed, but the CRAN version may not. This means that if you test the performance yourself with a previous version of <code>textutils</code>, you may run into error and installing the development version will solve for it.</p>
